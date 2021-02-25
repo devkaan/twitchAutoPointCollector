@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Twitch Channel Points Auto Clicker",
+  "description": "This extension collects twitch channel points automaticly.",
+  "version": "0.1.0",
+  "browser_action": {
+    "default_icon": "/inc/icon32.png",
+    "icons": {
+      "16": "/inc/icon16.png",
+      "32": "/inc/icon32.png",
+      "48": "/inc/icon48.png",
+      "64": "/inc/icon64.png",
+      "128": "/inc/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.twitch.tv/*"
+      ],
+      "js": [
+        "/js/jquery.min.js",
+        "/js/script.js",
+        "/js/main.js"
+      ],
+      "css": [
+        "/css/style.css"
+      ]
+    }
+  ]
+}
